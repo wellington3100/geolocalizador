@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalizador - Sunset Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>
+                <a href="index.html">
+                    <i class="fas fa-map-marked-alt"></i> Geolocalizador
+                </a>
+            </h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="mapa.php">Mapa Interactivo</a></li>
+                <li><a href="historial.php">Historial</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero">
+            <h2>Sistema de Geolocalización Interactivo</h2>
+            <p>Descubre tu ubicación y explora el mundo con mapas interactivos en estilo Sunset</p>
+            <a href="mapa.php" class="btn btn-primary btn-large">
+                <i class="fas fa-location-arrow"></i> Ir al Mapa
+            </a>
+        </header>
+
+        <section class="info-section">
+            <!-- APLICACIONES QUE USAN GEOLOCALIZACIÓN -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>5 Aplicaciones que utilizan geolocalización</h3>
+                <div class="apps-grid">
+                    <div class="app-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Google Maps</h4>
+                        <p>Navegación, mapas y ubicación en tiempo real</p>
+                    </div>
+                    <div class="app-item">
+                        <i class="fas fa-car"></i>
+                        <h4>Uber/DiDi</h4>
+                        <p>Servicios de transporte basados en ubicación</p>
+                    </div>
+                    <div class="app-item">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Uber Eats/Rappi</h4>
+                        <p>Entrega de comida según tu ubicación</p>
+                    </div>
+                    <div class="app-item">
+                        <i class="fas fa-running"></i>
+                        <h4>Strava/Nike Run</h4>
+                        <p>Seguimiento de actividades deportivas</p>
+                    </div>
+                    <div class="app-item">
+                        <i class="fas fa-camera"></i>
+                        <h4>Instagram/Facebook</h4>
+                        <p>Etiquetado de ubicaciones en publicaciones</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CÓMO GENERAR CLAVE API -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>¿Cómo se genera una clave API?</h3>
+                <p>
+                    Una clave API es un identificador único que autentica las solicitudes de tu aplicación 
+                    al servicio de API. El proceso general para generar una clave API es:
+                </p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Registro en la plataforma</h4>
+                            <p>Crea una cuenta en el servicio que ofrece la API (ej: Google Cloud, Mapbox, etc.)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Accede a la consola de desarrollador</h4>
+                            <p>Busca la sección de "API Keys", "Credentials" o "Desarrolladores"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Crear nuevo proyecto (opcional)</h4>
+                            <p>Algunas plataformas requieren crear un proyecto antes de generar claves</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Generar la clave API</h4>
+                            <p>Haz clic en "Crear clave API" o "Generate API Key"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Configurar restricciones</h4>
+                            <p>Establece restricciones de dominio, IP o aplicación para mayor seguridad</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Copiar y usar la clave</h4>
+                            <p>Copia la clave generada e impleméntala en tu código (nunca la compartas públicamente)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-examples">
+                    <h4>Ejemplos de plataformas populares:</h4>
+                    <ul>
+                        <li><strong>Google Maps API:</strong> console.cloud.google.com</li>
+                        <li><strong>Mapbox:</strong> account.mapbox.com</li>
+                        <li><strong>OpenWeatherMap:</strong> openweathermap.org/api</li>
+                        <li><strong>HERE Maps:</strong> developer.here.com</li>
+                    </ul>
+                </div>
+
+                <div class="note">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>Nota:</strong> Este proyecto utiliza OpenStreetMap con Leaflet, 
+                        que es gratuito y no requiere clave API para uso básico.
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIPOS DE GEOLOCALIZACIÓN -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fas fa-satellite"></i>
+                </div>
+                <h3>Tipos de geolocalización más utilizados</h3>
+                <ul class="types-list">
+                    <li>
+                        <strong>GPS (Sistema de Posicionamiento Global):</strong> 
+                        Utiliza satélites para proporcionar ubicación precisa. Es el método más común 
+                        en smartphones y dispositivos móviles.
+                    </li>
+                    <li>
+                        <strong>Geolocalización por IP:</strong> 
+                        Determina la ubicación aproximada basándose en la dirección IP del dispositivo. 
+                        Menos precisa pero útil para servicios web.
+                    </li>
+                    <li>
+                        <strong>WiFi Positioning System (WPS):</strong> 
+                        Utiliza señales de redes WiFi cercanas para triangular la posición. 
+                        Funciona bien en interiores donde GPS falla.
+                    </li>
+                    <li>
+                        <strong>Triangulación de torres celulares:</strong> 
+                        Calcula la posición mediante señales de múltiples torres de telefonía móvil. 
+                        Útil cuando GPS no está disponible.
+                    </li>
+                    <li>
+                        <strong>A-GPS (Assisted GPS):</strong> 
+                        Combina GPS con datos de red celular para obtener ubicación más rápida y precisa.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- QUÉ ES UNA API -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>¿Qué es una API?</h3>
+                <p>
+                    <strong>API (Application Programming Interface)</strong> es un conjunto de definiciones 
+                    y protocolos que permite que diferentes aplicaciones de software se comuniquen entre sí. 
+                    Funciona como un intermediario que permite que tu aplicación acceda a funcionalidades 
+                    o datos de otros servicios.
+                </p>
+                <p>
+                    En el contexto de geolocalización, las APIs permiten a los desarrolladores integrar 
+                    mapas, geocodificación, rutas y otras funcionalidades de ubicación en sus aplicaciones 
+                    sin tener que construir toda esa infraestructura desde cero.
+                </p>
+                <div class="api-benefits">
+                    <h4>Beneficios de usar APIs:</h4>
+                    <ul>
+                        <li>Ahorro de tiempo en desarrollo</li>
+                        <li>Acceso a funcionalidades avanzadas</li>
+                        <li>Actualizaciones automáticas del servicio</li>
+                        <li>Escalabilidad y confiabilidad</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- QUÉ ES GEOLOCALIZACIÓN -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>¿Qué es geolocalización?</h3>
+                <p>
+                    La geolocalización es el proceso de identificar y determinar la ubicación geográfica 
+                    real de un objeto o persona en el mundo físico. Esta tecnología utiliza diversos métodos 
+                    como GPS, direcciones IP, señales WiFi, torres de telefonía celular, o etiquetas RFID 
+                    para determinar las coordenadas de latitud y longitud.
+                </p>
+                <p>
+                    La geolocalización permite a aplicaciones y servicios ofrecer contenido personalizado 
+                    basado en la ubicación del usuario, mejorando la experiencia y proporcionando información 
+                    contextual relevante.
+                </p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h3>¿Listo para explorar?</h3>
+            <p>Prueba nuestro mapa interactivo y guarda tus ubicaciones favoritas</p>
+            <a href="mapa.php" class="btn btn-primary btn-large">
+                <i class="fas fa-compass"></i> Abrir Mapa Interactivo
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Geolocalizador Sunset Edition - Sistema de Ubicación Interactivo</p>
+            <p>Desarrollado con PHP, HTML, CSS y Leaflet.js</p>
+        </div>
+    </footer>
+</body>
+</html>
